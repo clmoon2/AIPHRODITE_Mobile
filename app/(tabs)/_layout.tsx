@@ -12,20 +12,29 @@ export default function TabsLayout() {
         name="(home)"
         options={{
           title: "Home",
+          tabBarIcon: ({ color, size }) => (
+              <Ionicons name="home-sharp" color={color} size={size} />
+          ),
         }}
     />
 
     <Tabs.Screen
-        name="(feed)"
+        name="(search)"
         options={{
-          title: "Feed",
+          title: "Search",
+          tabBarIcon: ({ color, size }) => (
+              <Ionicons name="search" color={color} size={size} />
+          ),
         }}
     />
     
     <Tabs.Screen
         name="(post-dummy)"
         options={{
-          title: "Post",
+          title: "",
+          tabBarIcon: ({ color, size }) => (
+              <Ionicons name="add-outline" color={color} size={size * 1.3} />
+          ),
         }}
         listeners={{
             tabPress: (e) => {
@@ -36,16 +45,22 @@ export default function TabsLayout() {
     />
 
     <Tabs.Screen
-        name="(shop)"
+        name="(closet)"
         options={{
-          title: "Shop",
+          title: "Closet",
+          tabBarIcon: ({ color, size }) => (
+              <Ionicons name="shirt" color={color} size={size} />
+          ),
         }}
     />
 
     <Tabs.Screen
-        name="(closet)"
+        name="(profile)"
         options={{
-          title: "Closet",
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+              <Ionicons name="person" color={color} size={size} />
+          ),
         }}
     />
     </Tabs>

@@ -1,7 +1,7 @@
-import { Tabs } from "expo-router";
+import { Tabs, router } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabsLayout() {
-
   return (
     <Tabs
       screenOptions={{
@@ -21,17 +21,16 @@ export default function TabsLayout() {
           title: "Feed",
         }}
     />
-
     
     <Tabs.Screen
-        name="(post)"
+        name="(post-dummy)"
         options={{
           title: "Post",
         }}
         listeners={{
             tabPress: (e) => {
                 e.preventDefault();
-                console.log("Tab intercepted!");
+                router.push("../(post)");
             }
         }}
     />

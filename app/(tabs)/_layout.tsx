@@ -1,11 +1,18 @@
 import { Tabs, router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { LightTheme, DarkTheme } from "@/assets/styles/globals";
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarStyle: {
+            backgroundColor: LightTheme.background,
+            borderTopWidth: 0,
+        },
+        tabBarInactiveTintColor: LightTheme.foreground,
+        tabBarActiveTintColor: LightTheme.primary,
       }}
     >
     <Tabs.Screen

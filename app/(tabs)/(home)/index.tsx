@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import { LightTheme, DarkTheme } from "@/assets/styles/globals";
 
 export default function Index() {
   return (
@@ -7,6 +8,7 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: LightTheme.background,
       }}
     >
       <Text>Edit app/(tabs)/(home)/index.tsx to edit this screen.</Text>
